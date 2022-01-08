@@ -1,0 +1,11 @@
+<!-- <app-filter></app-filter> -->
+<div class="row" class="spinner">
+  <app-loading-spinner *ngIf="!photos"></app-loading-spinner>
+</div>
+<div class="row">
+  <app-rover-photo
+    class="col-12 col-lg-4 col-sm-6"
+    *ngFor="let photo of photos; let i = index"
+    [photo]="photo"
+  ></app-rover-photo>
+</div>

@@ -1,0 +1,48 @@
+<!-- <mat-card class="custom-style">
+  <img
+    mat-card-image
+    [src]="photo.img_src"
+    alt="rover photo"
+    style="max-height: 200px;"
+  />
+  <mat-card-content>
+    <span class="badge rounded-pill bg-success">{{ photo.rover.status }}</span>
+    <p><b>Launch Date: </b> {{ photo.rover.launch_date }}</p>
+    <p><b>Landing Date: </b> {{ photo.rover.landing_date }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card> -->
+
+<div class="card custom-style">
+    <img
+      class="card-img-top"
+      [src]="photo.img_src"
+      alt="rover photo"
+      style="max-height: 200px;"
+    />
+    <div class="card-body">
+      <h4 class="card-title">
+        {{ photo.rover.name + ' rover' + ' - ' + photo.camera.full_name }}
+      </h4>
+      <div class="row">
+        <div class="col-12 status">
+          <span class="badge rounded-pill bg-success status">{{
+            photo.rover.status
+          }}</span>
+        </div>
+      </div>
+      <p><b>Launch Date: </b> {{ photo.rover.launch_date }}</p>
+      <p><b>Landing Date: </b> {{ photo.rover.landing_date }}</p>
+      <button
+        type="button"
+        [class]="!photo.liked ? 'btn btn-primary like' : 'btn btn-danger like'"
+        (click)="alterLike()"
+      >
+        {{ photo.liked ? 'dislike' : 'Like' }}
+      </button>
+    </div>
+  </div>
+  
