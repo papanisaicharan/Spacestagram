@@ -17,7 +17,6 @@ export class GalleryComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getPhotos();
     this.galleryService.photosChanged.subscribe((photos) => {
       this.photos = photos;
     });
@@ -25,8 +24,8 @@ export class GalleryComponent implements OnInit {
 
   ngOnDestroy() {}
 
-  getPhotos() {
-    this.nasaAPIService.fetchRoverImages().subscribe((response: any) => {
+  getPhotos(dateq: string) {
+    this.nasaAPIService.fetchRoverImages(dateq).subscribe((response: any) => {
       this.galleryService.setPhotos(response['photos']);
     });
   }

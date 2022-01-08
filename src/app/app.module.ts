@@ -8,6 +8,8 @@ import { AuthInterceptorService } from './auth/auth.interceptor';
 import { GalleryModule } from './gallery/gallery.module';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { NasaAPIService } from './shared-module/nasaAPIService';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepicker, MatDatepickerContent, MatDatepickerInput, MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { NasaAPIService } from './shared-module/nasaAPIService';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GalleryModule
+    GalleryModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     NasaAPIService,

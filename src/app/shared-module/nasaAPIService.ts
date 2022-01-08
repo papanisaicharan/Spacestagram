@@ -6,10 +6,11 @@ import { Photo } from './models/photo.model';
 export class NasaAPIService {
   constructor(private http: HttpClient) {}
 
-  fetchRoverImages() {
+  fetchRoverImages(date: string) {
     return this.http.get<Photo[]>(
       // we can also set the param in the url item, but preferring this way.
-      'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2019-02-02'
+      // earth_date	YYYY-MM-DD	
+      'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date='+date
       // instead use interceptor, and add the params
       // {
       //   params: new HttpParams().set('auth', user.token)

@@ -21,7 +21,7 @@
       class="card-img-top"
       [src]="photo.img_src"
       alt="rover photo"
-      style="max-height: 200px;"
+      style="height: 200px;"
     />
     <div class="card-body">
       <h4 class="card-title">
@@ -36,6 +36,7 @@
       </div>
       <p><b>Launch Date: </b> {{ photo.rover.launch_date }}</p>
       <p><b>Landing Date: </b> {{ photo.rover.landing_date }}</p>
+      <p><b>Earth Date: </b> {{ photo.earth_date }}</p>
       <button
         type="button"
         [class]="!photo.liked ? 'btn btn-primary like' : 'btn btn-danger like'"

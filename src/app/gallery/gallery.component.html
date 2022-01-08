@@ -1,4 +1,6 @@
-<!-- <app-filter></app-filter> -->
+<div class="row">
+  <app-filter (dateEmitter)="getPhotos($event)"></app-filter>
+</div>
 <div class="row" class="spinner">
   <app-loading-spinner *ngIf="!photos"></app-loading-spinner>
 </div>
