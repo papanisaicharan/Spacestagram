@@ -10,6 +10,7 @@ import { GalleryService } from './gallery.service';
 export class GalleryComponent implements OnInit {
 
   photos: any;
+  photosLength: number = 0;
 
   constructor(
     private galleryService: GalleryService,
@@ -19,6 +20,7 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
     this.galleryService.photosChanged.subscribe((photos) => {
       this.photos = photos;
+      this.photosLength = photos.length;
     });
   }
 

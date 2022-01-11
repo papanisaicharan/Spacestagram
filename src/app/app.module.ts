@@ -10,11 +10,13 @@ import { HeaderComponentComponent } from './header-component/header-component.co
 import { NasaAPIService } from './shared-module/nasaAPIService';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepicker, MatDatepickerContent, MatDatepickerInput, MatDatepickerModule } from '@angular/material/datepicker';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponentComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

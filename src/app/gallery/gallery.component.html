@@ -1,13 +1,14 @@
-<div class="row">
-  <app-filter (dateEmitter)="getPhotos($event)"></app-filter>
-</div>
-<div class="row" class="spinner">
+<app-filter (dateEmitter)="getPhotos($event)"></app-filter>
+<div class="spinner">
   <app-loading-spinner *ngIf="!photos"></app-loading-spinner>
 </div>
-<div class="row">
+<div class="row images">
   <app-rover-photo
     class="col-12 col-lg-4 col-sm-6"
     *ngFor="let photo of photos; let i = index"
     [photo]="photo"
   ></app-rover-photo>
+</div>
+<div class="row" *ngIf="photosLength == 0">
+  <app-no-results></app-no-results>
 </div>
