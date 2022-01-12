@@ -1,10 +1,14 @@
 .header {
-    // position: fixed;
-    // top: 0;
-    // width: 100%;
-    // z-index: 1000;
+    height: 50px;
+    width: 100%;
+    z-index: 1000;
+    overflow: hidden;
 }
 
 .main {
-    position: sticky;
+    min-height: calc(100% - 130px);
+}
+
+.footer{
+    height: 100px;
 }
